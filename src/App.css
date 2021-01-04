@@ -1,38 +1,74 @@
-.App {
+:root {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container > h1 {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-display {
+  font-size: 1.2rem;
+  height: 2.5em;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 0.2em;
+  border-radius: 0.2em;
+  padding: 0.6em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.result-display {
+  position: relative;
+  font-size: 2rem;
+  height: 2.2em;
+  background-color: #ccc;
+  color: #000;
+  border-radius: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.result-display > span {
+  position: absolute;
+  bottom: 0.2em;
+  right: 0.2em;
 }
 
-.App-link {
-  color: #61dafb;
+.num-pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.num-pad > .button {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.button {
+  font-size: 1.2rem;
+  padding: 1em 0;
+  border: 0;
+  color: #fff;
+  background-color: #0c82a7;
+  border-radius: 0.4em;
+}
+
+.button.ac-button {
+  background-color: red;
 }
