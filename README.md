@@ -8,4 +8,4 @@ To run it on your local machine, clone into the repo, then type:
 
 A sneak peek:
 
-![alt simple-calculator](screenshot.png)
+![alt simple-calculator](screenshot.gif)
